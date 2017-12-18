@@ -4,6 +4,9 @@
 // Variables
 @import "variables";
 
+// select2
+@import "select2";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -281,8 +284,13 @@ a.article, a.article:hover {
 }
 
 
-.pulse {
-
+span.tag{
+  background-color: #2f3a49;
+  color: #fff;
+  border: 1px solid #aaa;
+  float:left;
+  margin-right:5px;
+  border-radius:4px;
 }
 
 
@@ -343,5 +351,3 @@ a.article, a.article:hover {
         display: none;
     }
 }
-
-

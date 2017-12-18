@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./select2');
 
 /*window.Vue = require('vue');*/
 
@@ -26,7 +27,7 @@ const app = new Vue({
 
 
 
-// on scroll, 
+// on scroll,
 $(window).on('scroll',function(){
 
     // we round here to reduce a little workload

@@ -17,7 +17,7 @@
            @include('partials.navigation')
     </div>
 
-    @include('partials.cover-with-search')
+    @include('partials.cover-no-search')
 
     <div class="container">
 

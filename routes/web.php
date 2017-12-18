@@ -7,6 +7,7 @@ Route::get('/blog', 'PostsController@index')->name('blog');
 
 
 
+
 Route::get('posts/{post}', 'PostsController@show');
 
 Route::post('posts/{post}/create', 'CommentsController@store');
@@ -28,9 +29,31 @@ Route::get('logout', 'SessionsController@destroy');
 
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function(){
     Route::get('/admin', 'AdminController@index');
+    
+    
+    //Admin posts
     Route::get('/admin/posts', 'AdminController@posts');
     Route::delete('/admin/posts/{id}', 'PostsController@destroy');
     Route::post('/admin/posts', 'PostsController@store');
     Route::get('/admin/posts/create', 'PostsController@create');
     
+    
+    
+    //Admin pages
+    Route::get('/admin/pages', 'AdminController@pages');
+    Route::delete('/admin/pages/{id}', 'PagesController@destroy');
+    Route::get('/admin/pages/{id}', 'PagesController@edit');
+    Route::put('/admin/pages/{id}', 'PagesController@update');
+    
+    //Admin users
+    Route::get('/admin/users', 'AdminController@users');
+    
+    //Admin tags
+    Route::get('/admin/tags', 'TagController@index');
+    
 });
+
+Route::get('{slug}', 'PageController@show');
+
+/*Route::get('{slug}', ['uses' => 'PageController@show'])->where('slug', '([A-Za-z0-9\-\/]+)');*/
+

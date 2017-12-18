@@ -6,6 +6,9 @@
 // Variables
 @import "variables";
 
+// select2
+@import "select2";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -20,6 +23,10 @@ h1, h2, h3, h4, h5, h6{
 
 a{
     color:white;
+}
+
+.white-bg{
+  background: #fff;
 }
 
 .float-left{
@@ -42,6 +49,14 @@ a{
     text-align: center;
 }
 
+.text-left{
+  text-align: left;
+}
+
+
+.text-right{
+  text-align: right;
+}
 
 .nopadding{
     margin:0px !important;
@@ -53,7 +68,7 @@ a{
 }
 
 .heading{
-    font-weight: 900; 
+    font-weight: 900;
     font-size:55px;
     text-shadow: 0 0 10px rgba(21,21,43,.5);
     z-index: 1000;
@@ -88,7 +103,7 @@ a{
     max-height: 100px;
     transition: 1s ease;
     box-shadow: none;
-    
+
 }
 
 .nav-main.past-main{
@@ -114,7 +129,7 @@ a{
     justify-content: center;
     align-items:center;
     padding:20px;
-    
+
 }
 
 .main-menu .menu-item:hover{
@@ -284,7 +299,7 @@ a.past-main{
     justify-content: center;
     background-size:cover;
     padding:40px;
-    
+
 }
 
 .medium-box .heading{
@@ -317,7 +332,7 @@ a.past-main{
     background: green;
     z-index:500;
     transition: 1s ease;
-    
+
     top: 75%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
 
@@ -376,7 +391,7 @@ a.past-main{
 }
 
 .checkbox-center{
-    
+
 }
 
 /*
@@ -384,9 +399,9 @@ a.past-main{
 .fitness-label{
     height:125px;
     cursor:pointer;
-    
+
     transition:0.4s ease;
-    
+
 }
 
 .fitness-label:hover{
@@ -397,7 +412,7 @@ a.past-main{
 #fitnessworld{
     background: url('/../media/fitnessworld.png');
     background-size: cover;
-    
+
 }
 
 .fitness-img{
@@ -445,12 +460,19 @@ a.past-main{
 }
 */
 
+.profile-box{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 ul {
   list-style-type: none;
 }
 
-li {
+li.center-thumbnail {
   display: inline-block;
 }
 
@@ -459,6 +481,10 @@ input[type="checkbox"] {
 }
 
 label {
+
+}
+
+.fitness-label{
   border: 1px solid #fff;
   padding: 10px;
   display: block;
@@ -509,19 +535,19 @@ label img {
 }
 
 #fitnessdk{
-    
+
 }
 
 #freshfitness{
-    
+
 }
 
 #cfc{
-    
+
 }
 
 #urbangym{
-    
+
 }
 
 /* ---------------------------------------------------

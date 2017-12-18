@@ -126,26 +126,26 @@
     <div class="col-md-6 fitness-list">
     
         <ul>
-          <li>
+          <li class="center-thumbnail">
            {!! Form::checkbox('fitnesscenters[]', 'fitnessworld', false, ['class' => 'checkbox-center', 'id' => 'fitnessworld']) !!}
-           {!! Form::labelWithImage('fitnessworld','media/fitnessworld.png') !!}
-          </li>
-          <li>
+           {!! Form::labelWithImage('fitnessworld','media/fitnessworld.png', 'fitness-label') !!}
+          </li >
+          <li class="center-thumbnail">
            {!! Form::checkbox('fitnesscenters[]', 'fitnessdk', false, ['class' => 'checkbox-center', 'id' => 'fitnessdk']) !!}
-           {!! Form::labelWithImage('fitnessdk','media/fitnessdk.png') !!}
+           {!! Form::labelWithImage('fitnessdk','media/fitnessdk.png', 'fitness-label') !!}
           </li>
-          <li>
+          <li class="center-thumbnail">
            {!! Form::checkbox('fitnesscenters[]', 'freshfitness', false, ['class' => 'checkbox-center', 'id' => 'freshfitness']) !!}
-           {!! Form::labelWithImage('freshfitness','media/freshfitness.png') !!}
-          </li>
-          <li>
+           {!! Form::labelWithImage('freshfitness','media/freshfitness.png', 'fitness-label') !!}
+          </li >
+          <li class="center-thumbnail">
            {!! Form::checkbox('fitnesscenters[]', 'cfc', false, ['class' => 'checkbox-center', 'id' => 'cfc']) !!}
-           {!! Form::labelWithImage('cfc','media/cfc.png') !!}
+           {!! Form::labelWithImage('cfc','media/cfc.png', 'fitness-label') !!}
           </li>
-          <li>
+          <li class="center-thumbnail">
            
            {!! Form::checkbox('fitnesscenters[]', 'urbangym', false, ['class' => 'checkbox-center', 'id' => 'urbangym']) !!}
-           {!! Form::labelWithImage('urbangym','media/urbangym.png') !!}
+           {!! Form::labelWithImage('urbangym','media/urbangym.png', 'fitness-label') !!}
           </li>
     </ul>
     {!! Form::close() !!}

@@ -39,16 +39,23 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
-    
+
     public function roles()
     {
         return $this->belongsTomany(Role::class);
     }
-    
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+
+
     public function gyms(){
         return $this->belongsTomany(Gym::class);
     }
-    
+
     /**
     * @param string|array $roles
     */
@@ -75,5 +82,5 @@ class User extends Authenticatable
     {
       return null !== $this->roles()->where('name', $role)->first();
     }
-    
+
 }

@@ -28,24 +28,23 @@
                         </ul>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
                             <i class="glyphicon glyphicon-duplicate"></i>
-                            Pages
+                            Sider
                         </a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li><a href="/admin/pages">Alle sider</a></li>
+                            <li><a href="/admin/pages/create">Lav ny</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-link"></i>
-                            Portfolio
+                        <a href="/admin/users">
+                            <i class="glyphicon glyphicon-user"></i>
+                            Brugere
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ
+                        <a href="/admin/tags">
+                            <i class="glyphicon glyphicon-tags"></i>
+                            Tags
                         </a>
                     </li>
                     <li>
