@@ -13,7 +13,7 @@ class CreateUserTagTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_tag', function (Blueprint $table) {
+        Schema::create('tag_user', function (Blueprint $table) {
             $table->integer('tag_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();

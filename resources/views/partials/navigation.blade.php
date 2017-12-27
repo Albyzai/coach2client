@@ -11,10 +11,14 @@
                </ul>
 
 
-                <ul class="nav navbar-nav navbar-right main-menu">
+                <ul class="nav navbar-nav float-right main-menu">
+                            <a class="nav-link" href="/trainers"><li class="menu-item {{ set_active('trainers') }}">Trænere</li></a>
                             <a class="nav-link" href="/blog"><li class="menu-item {{ set_active('blog') }}">Blog</li></a>
-                            <a class="nav-link" href="/admin"><li class="menu-item {{ set_active('admin') }}">Admin</li></a>
                         @if(Auth::check())
+                            @can('accessAdmin', auth()->user())
+                            <a class="nav-link" href="/admin"><li class="menu-item {{ set_active('admin') }}">Admin</li></a>
+                            @endcan
+
 
                             {{-- <a class="nav-link" href="/profile"><li class="menu-item {{ set_active('profile') }}">{{ auth()->user()->name }}</li></a> --}}
 

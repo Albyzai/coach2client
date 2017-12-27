@@ -20,9 +20,6 @@
     @include('partials.cover-no-search')
 
     <div class="container">
-
-        @include('partials.reviews')
-
         @yield('content')
     </div>
 

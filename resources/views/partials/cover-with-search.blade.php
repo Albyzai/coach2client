@@ -6,15 +6,18 @@
         </div>
     </div>
             <div class="search-overlay">
-            
+
             <h2 class="white-text"><i>Find en træner nær dig</i></h2>
             <div class="form-group col-md-6">
-                {!! Form::text('search', null, ['class' => 'col-md-12 search-field', 'placeholder' => 'Find din nærmeste træner']) !!}
-                
-                
+            {!! Form::open(['method' => 'POST', 'url' => 'search']) !!}
+            {{ csrf_field() }}
+                {!! Form::text('search', null, ['class' => 'col-md-12 search-field', 'id' => 'autocomplete', 'onFocus' => 'geolocate()' ,'placeholder' => 'Indtast din adresse']) !!}
+
+
                 {!! Form::button('<i class="glyphicon glyphicon-search"></i>Søg', ['type' => 'submit', 'class' => 'search-submit']) !!}
-                
-                
+            {!! Form::close() !!}
+
+
             </div>
             </div>
 </div>

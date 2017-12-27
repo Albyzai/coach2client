@@ -21,9 +21,41 @@
 
     <div class="container">
 
-        @include('partials.reviews')
+        <div class="row margin-bot-100 margin-top-100">
+            <aside class="col-md-3 white-bg card" style="height:1000px;"></aside>
 
-        @yield('content')
+            @foreach($trainers as $trainer)
+            <div class="col-md-9">
+                <div class="col-md-12 white-bg trainer-entry" style="height:200px;">
+                    <div class="col-md-3 trainer-entry-content">
+                        <img src="/uploads/avatars/{{ $trainer->avatar }}" alt="" style="width:150px; height:150px; margin-top:25px; border-radius:10px;">
+                    </div>
+                    <div class="col-md-6 trainer-entry-content">
+                        <h3 class="text-left black-text">{{ $trainer->name }}</h3>
+                        <h5 class="text-left">Rating: 5 stars</h5>
+                        <div class="tag-container" style="position:absolute; bottom:25px;">
+                        <h5 class="text-left" >Tags</h5>
+                        @foreach($trainer->tags as $tag)
+                            <span class="tag"><i class="glyphicon glyphicon-tags" style="padding-right:10px;"></i>{{$tag->keyword}}</span>
+                        @endforeach
+                        </div>
+                    </div>
+                    <div class="col-md-3 trainer-entry-content">
+                        <p  style="margin-top:25px;"><i class="glyphicon glyphicon-map-marker"></i></p>
+                        <div class="button-container" style="margin-top:10px; height:150px;">
+                            <a href="/trainers/{{$trainer->id}}" class="button button-green button-minimal">Se trænerprofil<i class="glyphicon glyphicon-user text-right" style="float:right; line-height: 40px;"></i></a>
+
+                            <a href="" class="button button-green button-minimal" style="margin-top:40px;">Book tid</i></a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <hr>
+             @endforeach
+            </div>
+        </div>
+
     </div>
 
 
@@ -36,7 +68,6 @@
 
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
-            console.log(stop);
     if (stop > 150) {
         $('.nav-main').addClass('past-main');
         $('.nav-link').addClass('past-main');
@@ -57,6 +88,7 @@
         $('.logo').removeClass('hide');
     }
 });</script>
+
 <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.

@@ -16,6 +16,7 @@ class CreateGymsTable extends Migration
         Schema::create('gyms', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }

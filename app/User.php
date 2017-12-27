@@ -50,12 +50,17 @@ class User extends Authenticatable
         return $this->belongsToMany(Tag::class);
     }
 
-
-
     public function gyms(){
         return $this->belongsTomany(Gym::class);
     }
 
+    public function isTrainer(){
+      return $this->hasRole('trainer');
+    }
+
+    public function isAdmin(){
+      return $this->hasRole('admin');
+    }
     /**
     * @param string|array $roles
     */

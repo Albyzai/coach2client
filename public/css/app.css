@@ -9001,6 +9001,34 @@ button.close {
   }
 }
 
+.row .row {
+  margin-left: 0px;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.margin-top-100 {
+  margin-top: 100px;
+}
+
+.margin-bot-100 {
+  margin-bottom: 100px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.margin-bot-25 {
+  margin-bottom: 25px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -9016,10 +9044,21 @@ h6 {
 
 a {
   color: white;
+  text-decoration: none;
+}
+
+a.green-link {
+  color: #2ab27b;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+a.green-link:hover {
+  color: #009245;
 }
 
 .white-bg {
-  background: #fff;
+  background: #fff !important;
 }
 
 .float-left {
@@ -9039,6 +9078,7 @@ a {
 }
 
 .text-center {
+  display: block;
   text-align: center;
 }
 
@@ -9057,6 +9097,10 @@ a {
 
 .white-text {
   color: #fff;
+}
+
+.black-text {
+  color: #000;
 }
 
 .heading {
@@ -9082,6 +9126,10 @@ a {
   float: left;
   max-height: 70px;
   padding: 15px 15px 15px 0px;
+}
+
+.navbar {
+  border: none;
 }
 
 .logo-black {
@@ -9242,6 +9290,10 @@ a.past-main {
   z-index: 1000;
 }
 
+.cover-container {
+  height: 100%;
+}
+
 .search-overlay {
   position: absolute;
   display: -webkit-box;
@@ -9380,8 +9432,24 @@ a.past-main {
   background: white;
 }
 
-.row {
-  margin-bottom: 100px;
+hr {
+  border: none;
+  height: 2px;
+  margin-top: 10px;
+}
+
+hr.hr-short {
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+hr.hr-short:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #009245;
 }
 
 .medium-box {
@@ -9412,6 +9480,19 @@ a.past-main {
   padding-bottom: 25px;
 }
 
+.profile-picture {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 200px;
+  height: 200px;
+  float: left;
+  background-color: #fff;
+  border: 4px solid #fff;
+  border-radius: 2px;
+}
+
 .card:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -9426,6 +9507,11 @@ a.past-main {
   font-weight: 900;
   background: green;
   color: white;
+}
+
+img.fitness-center {
+  width: 100%;
+  height: 75px;
 }
 
 /*
@@ -9494,6 +9580,12 @@ a.past-main {
 }
 */
 
+.profile-header {
+  position: relative;
+  margin-bottom: 0px;
+  top: -100px;
+}
+
 .profile-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9520,6 +9612,24 @@ li.center-thumbnail {
 
 input[type="checkbox"] {
   display: none;
+}
+
+.trainer-entry:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background-color: #7e92ac;
+  width: 50%;
+  left: 25%;
+}
+
+.trainer-entry-content {
+  height: 100%;
+}
+
+.trainer-infobox {
+  height: 250px;
 }
 
 .fitness-label {
@@ -9614,6 +9724,77 @@ label img {
           align-items: center;
 }
 
+.profile-info {
+  float: right;
+}
+
+span.tag {
+  background-color: #2f3a49;
+  color: #fff;
+  border: 1px solid #aaa;
+  float: left;
+  margin-right: 5px;
+  border-radius: 4px;
+  padding: 3px 6px 3px 6px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------
+    Buttons
+----------------------------------------------------- */
+
+.button-green {
+  color: #009245;
+  border-color: #009245;
+  background-color: transparent;
+}
+
+.button-green:hover {
+  background-color: #009245;
+  color: #fff;
+}
+
+.button-white {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.button-white:hover {
+  color: #009245;
+  background-color: #fff;
+}
+
+.button {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  font-weight: 400;
+  font-size: 1.1em;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: left;
+  display: block;
+  height: 40px;
+  min-width: 125px;
+  border-radius: 5px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  margin: auto;
+  z-index: 1;
+}
+
+.button-minimal {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.edit-cover {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+
 /* ---------------------------------------------------
     Footer
 ----------------------------------------------------- */
@@ -9628,6 +9809,8 @@ footer a:hover {
 }
 
 footer hr {
+  border: 1px solid #fff;
+  background-color: #fff;
   margin: 0;
 }
 
@@ -9645,5 +9828,9 @@ footer h5 {
 .footer-list li {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.footer-content {
+  padding-top: 50px;
 }
 

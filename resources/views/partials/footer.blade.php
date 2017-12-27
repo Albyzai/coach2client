@@ -1,6 +1,6 @@
 <footer class="container-fluid nopadding">
-  <div class="container">
-   <div class="row">
+  <div class="container footer-content">
+   <div class="row margin-bot-25">
     <div class="col-md-3">
        <h5>FIRMA</h5>
         <ul class="footer-list">
@@ -41,7 +41,7 @@
     </div>
    </div>
     <hr>
-    <div class="row">
+    <div class="row margin-bot-25">
         <div class="col-md-4">
             <h5 class="float-left">CVR: 35 38 20 48</h5>
         </div>

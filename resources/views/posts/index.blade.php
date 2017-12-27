@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.small-cover')
 
 @section('content')
 
@@ -9,6 +9,7 @@
 			@include('posts.partials.post')
 
 		</div>
+        <hr>
 
 	@endforeach
 
